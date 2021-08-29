@@ -83,7 +83,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',   # Default thumbnail backend, can be replaced
     'django_tables2',
     
-    #'apps.user',
+    'apps.users',
 ]
 
 SITE_ID = 1
@@ -196,3 +196,5 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
     },
 }
+
+AUTH_USER_MODEL = 'users.User'
