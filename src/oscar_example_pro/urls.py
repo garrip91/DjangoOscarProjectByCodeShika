@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.apps import apps
 
+from apps.dates_and_telephones.views import save_phone_and_date
+
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
@@ -28,4 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include(apps.get_app_config('oscar').urls[0])),
+    
+    path('phone-and-date/', save_phone_and_date, name='phone_and_date'),
 ]

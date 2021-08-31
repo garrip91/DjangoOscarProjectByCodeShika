@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'oscar.apps.offer.apps.OfferConfig',
     'oscar.apps.order.apps.OrderConfig',
     'oscar.apps.customer.apps.CustomerConfig',
+    #'apps.customer.apps.CustomerConfig',    # это вместо того, что строкой выше
     'oscar.apps.search.apps.SearchConfig',
     'oscar.apps.voucher.apps.VoucherConfig',
     'oscar.apps.wishlists.apps.WishlistsConfig',
@@ -83,12 +84,15 @@ INSTALLED_APPS = [
     'sorl.thumbnail',   # Default thumbnail backend, can be replaced
     'django_tables2',
     
-    'apps.users',
+    #'apps.users',
+    
+    #'phone_field',
+    'phonenumber_field',
+    
+    'apps.dates_and_telephones',
 ]
 
 SITE_ID = 1
-
-#AUTH_USER_MODEL = 'user.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -197,4 +201,8 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-AUTH_USER_MODEL = 'users.User'
+#AUTH_USER_MODEL = 'customer.User'
+
+# ДЛЯ phonenumber_field:
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'RU'
