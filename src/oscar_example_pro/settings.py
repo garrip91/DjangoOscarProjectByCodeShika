@@ -84,10 +84,8 @@ INSTALLED_APPS = [
     'sorl.thumbnail',   # Default thumbnail backend, can be replaced
     'django_tables2',
     
-    #'apps.users',
-    
     #'phone_field',
-    'phonenumber_field',
+    #'phonenumber_field',
     
     'apps.dates_and_telephones',
 ]
@@ -201,8 +199,8 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-#AUTH_USER_MODEL = 'customer.User'
+#AUTH_USER_MODEL = 'customer.Customer'
 
 # ДЛЯ phonenumber_field:
-PHONENUMBER_DB_FORMAT = 'NATIONAL'
-PHONENUMBER_DEFAULT_REGION = 'RU'
+#PHONENUMBER_DB_FORMAT = 'NATIONAL'
+#PHONENUMBER_DEFAULT_REGION = 'RU'

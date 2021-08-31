@@ -14,7 +14,7 @@ def save_phone_and_date(request):
             phone_and_date = form.save(commit=False)
             #phone_and_date.phone_number = '+79201561358'
             number = request.GET.get('phone_number')
-            print(F"+7 ({number[:3]}) {number[3:6]}-{number[6:8]}-{number[8:]}")
+            print(F"{number}")
             phone_and_date.save()
             return HttpResponseRedirect('/')
         else:

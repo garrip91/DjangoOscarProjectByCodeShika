@@ -6,7 +6,7 @@ from .models import PhoneAndDate
 
 class PhoneAndDateForm(forms.ModelForm):
 
-    phone_number = forms.CharField(label='Номер телефона', widget=forms.TextInput(attrs={'placeholder': 'Введите номер телефона'}))
+    phone_number = forms.CharField(label='Номер телефона', widget=forms.TextInput(attrs={'placeholder': 'Введите номер телефона', 'class': 'phone_mask'}))
     
     class Meta:
         model = PhoneAndDate
